@@ -1,0 +1,204 @@
+<!-- Blog and News Section -->
+<div class="bg-green-50">
+  <div class="container mx-auto py-12 px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-sm text-teal-600 uppercase tracking-wider">BLOG AND NEWS</h2>
+      <h1 class="text-4xl font-bold text-gray-800 mt-2">Better Digital Insurance Begins <br class="hidden md:block">Right Here</h1>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Stay updated with the latest news and insights from our expert team.
+      </p>
+    </div>
+    
+    <!-- Blog Posts Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Blog Post 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="openModal('blog1')" tabindex="0" aria-labelledby="blog1-title" aria-describedby="blog1-description">
+        <img alt="A man driving a car" class="w-full h-48 object-cover" src="assets/images/8.jpg" />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-gray-500">BY ADMIN | INSURANCE</span>
+            <span class="bg-green-600 text-white text-xs px-2 py-1 rounded">14 AUG 2021</span>
+          </div>
+          <h2 id="blog1-title" class="text-xl font-bold text-gray-800 mb-2">What Is Personal Liability Umbrella Coverage</h2>
+          <p id="blog1-description" class="text-gray-600 mb-4">
+            Learn about the benefits and coverage details of personal liability umbrella insurance.
+          </p>
+          <a class="text-teal-600 flex items-center hover:underline" href="javascript:void(0);" onclick="openModal('blog1')">
+            <span>Read More</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Blog Post 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="openModal('blog2')" tabindex="0" aria-labelledby="blog2-title" aria-describedby="blog2-description">
+        <img alt="A man driving a car" class="w-full h-48 object-cover" src="assets/images/7.jpg" />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-gray-500">BY ADMIN | INSURANCE</span>
+            <span class="bg-green-600 text-white text-xs px-2 py-1 rounded">14 AUG 2021</span>
+          </div>
+          <h2 id="blog2-title" class="text-xl font-bold text-gray-800 mb-2">Insurance Covers Risk of Fire: Absence of Fire Insurance</h2>
+          <p id="blog2-description" class="text-gray-600 mb-4">
+            Understanding the importance of having fire insurance to mitigate potential risks.
+          </p>
+          <a class="text-teal-600 flex items-center hover:underline" href="javascript:void(0);" onclick="openModal('blog2')">
+            <span>Read More</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Blog Post 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer" onclick="openModal('blog3')" tabindex="0" aria-labelledby="blog3-title" aria-describedby="blog3-description">
+        <img alt="A man driving a car" class="w-full h-48 object-cover" src="assets/images/6.jpg" />
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-gray-500">BY ADMIN | INSURANCE</span>
+            <span class="bg-green-600 text-white text-xs px-2 py-1 rounded">14 AUG 2021</span>
+          </div>
+          <h2 id="blog3-title" class="text-xl font-bold text-gray-800 mb-2">Ambulance Cover of Fire on Insurance Serving</h2>
+          <p id="blog3-description" class="text-gray-600 mb-4">
+            Explore how ambulance coverage complements your fire insurance policy.
+          </p>
+          <a class="text-teal-600 flex items-center hover:underline" href="javascript:void(0);" onclick="openModal('blog3')">
+            <span>Read More</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Pagination Dots -->
+    <div class="flex justify-center mt-8 space-x-2">
+      <span class="h-3 w-3 bg-teal-600 rounded-full cursor-pointer active" onclick="goToPage(1)"></span>
+      <span class="h-3 w-3 bg-gray-300 rounded-full cursor-pointer" onclick="goToPage(2)"></span>
+      <span class="h-3 w-3 bg-gray-300 rounded-full cursor-pointer" onclick="goToPage(3)"></span>
+      <!-- Add more dots as needed -->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="blog-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50" aria-hidden="true">
+  <div class="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-1/2 overflow-y-auto max-h-screen relative">
+    <!-- Close Button -->
+    <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-700 hover:text-gray-900 focus:outline-none" aria-label="Close Modal">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+        viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    
+    <!-- Modal Content -->
+    <div class="p-6">
+      <img id="modal-image" alt="Blog Image" class="w-full h-64 object-cover rounded-lg mb-4" src="" />
+      <h2 id="modal-title" class="text-2xl font-bold text-gray-800 mb-2"></h2>
+      <p id="modal-meta" class="text-sm text-gray-500 mb-4"></p>
+      <p id="modal-content" class="text-gray-700"></p>
+      <div class="mt-6 flex space-x-4">
+        <a id="modal-facebook" class="text-green-600 transform hover:scale-110 transition-transform duration-300" href="#" aria-label="Share on Facebook" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a id="modal-instagram" class="text-green-600 transform hover:scale-110 transition-transform duration-300" href="#" aria-label="Share on Instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a id="modal-twitter" class="text-green-600 transform hover:scale-110 transition-transform duration-300" href="#" aria-label="Share on Twitter" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a id="modal-linkedin" class="text-green-600 transform hover:scale-110 transition-transform duration-300" href="#" aria-label="Share on LinkedIn" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tailwind CSS and JavaScript for Interactivity -->
+<script>
+  // Blog Data
+  const blogData = {
+    blog1: {
+      title: 'What Is Personal Liability Umbrella Coverage',
+      meta: 'BY ADMIN | INSURANCE | 14 AUG 2021',
+      image: 'assets/images/8.jpg',
+      content: `Personal liability umbrella coverage provides additional liability protection beyond the limits of your existing insurance policies, such as homeowners, auto, or renters insurance. It helps protect your assets and future earnings in the event of a major claim or lawsuit against you.`,
+      socials: {
+        facebook: '#',
+        instagram: '#',
+        twitter: '#',
+        linkedin: '#'
+      }
+    },
+    blog2: {
+      title: 'Insurance Covers Risk of Fire: Absence of Fire Insurance',
+      meta: 'BY ADMIN | INSURANCE | 14 AUG 2021',
+      image: 'assets/images/7.jpg',
+      content: `Fire insurance is essential for protecting your property against the devastating effects of fire. Without it, you risk significant financial loss and the inability to rebuild or repair your home or business in the aftermath of a fire.`,
+      socials: {
+        facebook: '#',
+        instagram: '#',
+        twitter: '#',
+        linkedin: '#'
+      }
+    },
+    blog3: {
+      title: 'Ambulance Cover of Fire on Insurance Serving',
+      meta: 'BY ADMIN | INSURANCE | 14 AUG 2021',
+      image: 'assets/images/6.jpg',
+      content: `Ambulance coverage in fire insurance policies ensures that medical expenses incurred during emergencies are covered. This comprehensive coverage provides peace of mind, knowing that both property and personal health are protected in the event of a fire-related incident.`,
+      socials: {
+        facebook: '#',
+        instagram: '#',
+        twitter: '#',
+        linkedin: '#'
+      }
+    }
+  };
+  
+  // Function to Open Modal
+  function openModal(blogId) {
+    const blog = blogData[blogId];
+    if (!blog) return;
+    
+    document.getElementById('modal-image').src = blog.image;
+    document.getElementById('modal-image').alt = `Image for ${blog.title}`;
+    document.getElementById('modal-title').textContent = blog.title;
+    document.getElementById('modal-meta').textContent = blog.meta;
+    document.getElementById('modal-content').textContent = blog.content;
+    document.getElementById('modal-facebook').href = blog.socials.facebook;
+    document.getElementById('modal-instagram').href = blog.socials.instagram;
+    document.getElementById('modal-twitter').href = blog.socials.twitter;
+    document.getElementById('modal-linkedin').href = blog.socials.linkedin;
+    
+    document.getElementById('blog-modal').classList.remove('hidden');
+  }
+  
+  // Function to Close Modal
+  function closeModal() {
+    document.getElementById('blog-modal').classList.add('hidden');
+  }
+  
+  // Function to Go to Specific Page
+  function goToPage(pageNumber) {
+    // Implement your pagination logic here.
+    // For demonstration, we'll just alert the page number.
+    alert('Go to page: ' + pageNumber);
+  }
+  
+  // Close modal when pressing 'Escape' key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
+  
+  // Close modal when clicking outside the modal content
+  document.getElementById('blog-modal').addEventListener('click', function(event) {
+    if (event.target === this) {
+      closeModal();
+    }
+  });
+</script>

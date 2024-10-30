@@ -1,0 +1,95 @@
+<!-- Enhanced Newsletter Subscription Section -->
+<div class="bg-gradient-to-r from-teal-100 to-teal-50 py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center">
+      <p class="text-sm text-teal-600 font-semibold">READY TO GET STARTED</p>
+      <h1 class="text-4xl font-bold text-gray-800 mt-2">Get The Latest Insurance News In Minutes</h1>
+      <p class="text-gray-600 mt-4">
+        Stay updated with the latest trends, tips, and news in the insurance industry. Join our community of over 10,000 subscribers!
+      </p>
+      
+      <!-- Benefits List -->
+      <div class="mt-6 flex flex-col md:flex-row justify-center items-start md:space-x-12">
+        <div class="flex items-center mt-4 md:mt-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-gray-700">Exclusive Insights</span>
+        </div>
+        <div class="flex items-center mt-4 md:mt-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-gray-700">Weekly Updates</span>
+        </div>
+        <div class="flex items-center mt-4 md:mt-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="text-gray-700">Free Resources</span>
+        </div>
+      </div>
+      
+      <!-- Subscription Form -->
+      <div class="mt-12">
+        <form id="subscription-form" class="flex flex-col sm:flex-row justify-center items-center">
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email address"
+            class="w-full sm:w-auto px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600"
+            aria-label="Email address"
+            required
+          />
+          <button
+            type="submit"
+            class="mt-4 sm:mt-0 sm:ml-4 px-6 py-3 bg-teal-600 text-white font-semibold rounded-md hover:bg-teal-700 transition-colors duration-300"
+            aria-label="Subscribe"
+          >
+            Subscribe
+          </button>
+        </form>
+        <!-- Success Message -->
+        <p id="success-message" class="mt-4 text-green-600 hidden">Thank you for subscribing!</p>
+      </div>
+      
+      <!-- Privacy Assurance -->
+      <p class="mt-4 text-sm text-gray-500">
+        We respect your privacy. Unsubscribe at any time.
+      </p>
+      
+      <!-- Social Proof (Optional) -->
+      <div class="mt-6 text-gray-700">
+        <p>Join over <span class="font-semibold">10,000+</span> subscribers!</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Optional: Add a decorative illustration or icon -->
+  <div class="absolute inset-0 pointer-events-none">
+    <svg class="w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 600 600">
+      <path fill="#008080" d="M300,0C134.3,0,0,134.3,0,300s134.3,300,300,300s300-134.3,300-300S465.7,0,300,0z M300,540C155.9,540,60,444.1,60,300S155.9,60,300,60s240,95.9,240,240S444.1,540,300,540z"/>
+    </svg>
+  </div>
+</div>
+
+<!-- Tailwind CSS and JavaScript for Form Handling -->
+<script>
+  document.getElementById('subscription-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('email');
+    const successMessage = document.getElementById('success-message');
+    
+    // Basic email validation
+    const email = emailInput.value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if(emailPattern.test(email)) {
+      // Simulate successful subscription
+      successMessage.classList.remove('hidden');
+      emailInput.value = '';
+    } else {
+      alert('Please enter a valid email address.');
+    }
+  });
+</script>
